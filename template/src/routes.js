@@ -1,42 +1,16 @@
 
 import * as React from 'react';
-import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
+import HomeScreen from './pages/home';
+import DetailsScreen from './pages/details';
+import SettingsScreen from './pages/settings';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
-
-function HomeScreen({ navigation }) {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Home Screen</Text>
-            <Button
-                onPress={() => navigation.navigate('Details')}
-                title="Open Details"
-            />
-        </View>
-    );
-}
-
-function DetailsScreen() {
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Text>Details Screen</Text>
-        </View>
-    );
-}
-
-function SettingsScreen() {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Settings!</Text>
-        </View>
-    );
-}
 
 const MainStackScreen = () => {
     return (
