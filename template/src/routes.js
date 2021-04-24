@@ -43,6 +43,8 @@ const MainStackScreen = () => {
         <Tab.Navigator
             screenOptions={({ route }) => ({
                 headerShown: false,
+                tabBarActiveTintColor: 'tomato',
+                tabBarinactiveTintColor: 'gray',
                 tabBarIcon: ({ focused, color, size }) => {
                     let iconName;
 
@@ -59,11 +61,7 @@ const MainStackScreen = () => {
                     // You can return any component that you like here!
                     return <Icon name={iconName} size={size} color={color} />;
                 },
-            })}
-            tabBarOptions={{
-                activeTintColor: 'tomato',
-                inactiveTintColor: 'gray',
-            }}>
+            })}>
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Details" component={DetailsScreen} />
             <Tab.Screen name="Settings" component={SettingsScreen} />
