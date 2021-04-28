@@ -6,9 +6,4 @@
 ```
 $ npx react-native init <newName> --template https://github.com/MadsonChavante/react-native-template-madson.git
 ```
-```
-$ cd <newName>
-```
-```
-$ npx react-native-rename <newName>
-```
+
